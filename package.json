@@ -17,6 +17,7 @@
   "author": "User",
   "license": "GPL-2.0",
   "devDependencies": {
+    "@decky/rollup": "^1.0.1",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.2.1",

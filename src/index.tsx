@@ -7,11 +7,11 @@ import {
   ButtonItem,
   Focusable,
   staticClasses,
-} from "decky-frontend-lib";
-import { VFC, useState } from "react";
+} from "@decky/ui";
+import { FC, useState } from "react";
 import { FaRobot } from "react-icons/fa";
 
-const Content: VFC<{}> = ({}) => {
+const Content: FC<{}> = ({}) => {
   const [prompt, setPrompt] = useState<string>("");
   const [includeScreenshot, setIncludeScreenshot] = useState<boolean>(false);
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
@@ -113,7 +113,6 @@ const Content: VFC<{}> = ({}) => {
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               style={{ width: "100%" }}
-              placeholder="Enter your prompt for Claude..."
             />
           </Focusable>
         </PanelSectionRow>

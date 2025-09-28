@@ -25,7 +25,7 @@ export default {
       'react-dom': 'SP_REACTDOM',
       'decky-frontend-lib': 'DFL',
     },
-    format: 'iife',
+    format: 'es',
     exports: 'default',
   },
 };

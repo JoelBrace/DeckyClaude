@@ -1,7 +1,7 @@
 {
-  "name": "Claude Assistant",
+  "name": "Claude Assistant Plugin",
   "author": "User",
-  "flags": ["_beta"],
+  "flags": [],
   "api_version": 1,
   "publish": {
     "description": "A Decky plugin to interact with Claude API for text generation and image analysis",

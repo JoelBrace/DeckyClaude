@@ -151,8 +151,8 @@ const Content: FC<{}> = ({}) => {
 
 export default definePlugin(() => {
   return {
-    name: "Claude Assistant",
-    titleView: <div className={staticClasses.Title}>Claude Assistant</div>,
+    name: "Claude Assistant Plugin",
+    titleView: <div className={staticClasses.Title}>Claude Assistant Plugin</div>,
     content: <Content />,
     icon: <FaRobot />,
     onDismount() {

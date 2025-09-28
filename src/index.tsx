@@ -1,5 +1,4 @@
 import {
-  definePlugin,
   PanelSection,
   PanelSectionRow,
   TextField,
@@ -8,6 +7,7 @@ import {
   Focusable,
   staticClasses,
 } from "@decky/ui";
+import { definePlugin } from "@decky/api";
 import { FC, useState } from "react";
 import { FaRobot } from "react-icons/fa";
 
@@ -151,8 +151,12 @@ const Content: FC<{}> = ({}) => {
 
 export default definePlugin(() => {
   return {
-    title: <div className={staticClasses.Title}>Claude Assistant</div>,
+    name: "Claude Assistant",
+    titleView: <div className={staticClasses.Title}>Claude Assistant</div>,
     content: <Content />,
     icon: <FaRobot />,
+    onDismount() {
+      // Cleanup when plugin unloads
+    },
   };
 });

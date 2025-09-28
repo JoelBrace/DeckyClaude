@@ -1,7 +1,6 @@
 {
   "name": "claude-assistant",
   "version": "1.0.0",
-  "type": "module",
   "description": "A Decky plugin to interact with Claude API",
   "scripts": {
     "build": "rollup -c",

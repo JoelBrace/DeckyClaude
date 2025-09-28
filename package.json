@@ -1,0 +1,42 @@
+{
+  "name": "claude-assistant",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Decky plugin to interact with Claude API",
+  "scripts": {
+    "build": "shx rm -rf dist && rollup -c",
+    "watch": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "decky",
+    "plugin",
+    "claude",
+    "ai"
+  ],
+  "author": "User",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-typescript": "^11.1.3",
+    "@types/react": "16.14.0",
+    "@types/react-dom": "16.9.0",
+    "rollup": "^3.29.2",
+    "shx": "^0.3.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "decky-frontend-lib": "^3.21.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-icons": "^4.12.0"
+  },
+  "pnpmOverrides": {
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  }
+}

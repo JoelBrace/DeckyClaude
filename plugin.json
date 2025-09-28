@@ -1,0 +1,10 @@
+{
+  "name": "Claude Assistant",
+  "author": "User",
+  "flags": ["_beta"],
+  "publish": {
+    "description": "A Decky plugin to interact with Claude API for text generation and image analysis",
+    "tags": ["ai", "assistant", "claude"],
+    "image": "https://example.com/image.png"
+  }
+}

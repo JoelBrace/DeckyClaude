@@ -12,22 +12,22 @@ A Decky plugin that allows you to interact with your Claude API server directly 
 ## Prerequisites
 
 1. **Decky Loader** must be installed on your Steam Deck
-2. **Claude API Server** must be running at `localhost:2000`
-   - Your Claude API server should be located at `~/ClaudeApi/claude_server.py`
-   - Start it with: `python3 ~/ClaudeApi/claude_server.py`
+2. A **Claude API Server** reachable on your network at `http://192.168.1.252:2000`
+   - Ensure the Deck can reach that host (same Wi-Fi/VLAN, firewall open)
+   - The server must expose a `/claude` endpoint that accepts multipart form data
 
 ## Installation
 
-1. Copy the entire `claude-decky-plugin` folder to your Decky plugins directory:
+1. Copy the entire `claude-decky-plugin` folder into Decky's plugin directory (`~/homebrew/plugins/` on a Steam Deck):
    ```bash
-   cp -r claude-decky-plugin ~/.local/share/Steam/steamapps/common/SteamLinux/steamapps/common/SteamLinux/steamapps/common/Steam/config/systemapps/steamapps/common/DeckyLoader/plugins/
+   cp -r claude-decky-plugin ~/homebrew/plugins/claude-decky-plugin
    ```
 
 2. Restart Steam or reload Decky plugins
 
 ## Usage
 
-1. Make sure your Claude API server is running on port 2000
+1. Make sure your Claude API server at `192.168.1.252:2000` is reachable from the Deck
 2. Open the Steam Deck side panel and look for the "Claude Assistant" plugin (robot icon)
 3. Enter your prompt in the text field
 4. Optionally check "Include Screenshot" to capture and send a screenshot with your request
@@ -59,7 +59,7 @@ This plugin is designed to work with the Claude API server that:
 ## Troubleshooting
 
 - **Plugin not appearing**: Ensure Decky Loader is properly installed and the plugin folder is in the correct location
-- **API connection errors**: Make sure the Claude API server is running on `localhost:2000`
+- **API connection errors**: Confirm the Deck can reach `http://192.168.1.252:2000/claude` (ping the host, check firewall rules)
 - **Screenshot capture failing**: The plugin may require additional permissions for screen capture on Steam Deck
 
 ## License

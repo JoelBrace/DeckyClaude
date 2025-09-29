@@ -11,6 +11,8 @@ import { definePlugin } from "@decky/api";
 import { FC, useState } from "react";
 import { FaRobot } from "react-icons/fa";
 
+const CLAUDE_API_URL = "http://192.168.1.252:2000/claude";
+
 const Content: FC<{}> = ({}) => {
   const [prompt, setPrompt] = useState<string>("");
   const [includeScreenshot, setIncludeScreenshot] = useState<boolean>(false);
@@ -75,7 +77,7 @@ const Content: FC<{}> = ({}) => {
         }
       }
 
-      const response = await fetch('http://localhost:2000/claude', {
+      const response = await fetch(CLAUDE_API_URL, {
         method: 'POST',
         body: formData,
       });
